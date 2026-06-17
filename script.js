@@ -1681,3 +1681,61 @@ setTimeout(() => {
   wheelPrograms = getWheelPrograms();
   drawWheel();
 }, 2000);
+document.addEventListener("DOMContentLoaded", () => {
+    // Master pool containing all verified public CDN links
+    const pool = [
+      "https://cdn.hackclub.com/019ed762-ea08-7eb2-b8b4-0bc1c26c10d1/screenshot_2026-06-18_015147.png",
+      "https://cdn.hackclub.com/019ed762-ed61-7e3f-a9af-6f2de6218eb8/screenshot_2026-06-18_022716.png",
+      "https://cdn.hackclub.com/019ed762-f0c7-7f5c-a62d-bf41b8c96a59/screenshot_2026-06-18_022726.png",
+      "https://cdn.hackclub.com/019ed762-f3c2-757b-87e9-23be2ce93bd1/screenshot_2026-06-18_022735.png",
+      "https://cdn.hackclub.com/019ed762-f69e-721b-924a-3f05a4cd4ec1/screenshot_2026-06-18_022742.png",
+      "https://cdn.hackclub.com/019ed762-f9e8-7501-8670-987b07d6344b/screenshot_2026-06-18_022754.png",
+      "https://cdn.hackclub.com/019ed762-fc59-7c3f-91db-4dfaee793c98/screenshot_2026-06-18_022801.png",
+      "https://cdn.hackclub.com/019ed762-feab-72aa-a042-5a9dcc1a4081/screenshot_2026-06-18_022814.png",
+      "https://cdn.hackclub.com/019ed763-01ae-7a18-8834-18f2b9025090/screenshot_2026-06-18_022823.png",
+      "https://rework.hackclub.com/thermex.png",
+      "https://printboard.hackclub.com/skadis1.png",
+      "https://magazine.hackclub.com/_astro/99.DL4SuUSa_1XHsFB.webp",
+      "https://magazine.hackclub.com/_astro/82.Bk-ukOYK_ZqF3x4.webp",
+      "https://magazine.hackclub.com/_astro/93.DYuWRcNI_ZVhTHj.webp",
+      "https://cdn.hackclub.com/019ed763-245a-7da0-952c-81f0a6d786ff/screenshot_2026-06-18_022856.png",
+      "https://cdn.hackclub.com/019ed763-26d8-7900-ac8c-d7664fb2562e/screenshot_2026-06-18_022900.png",
+      "https://cdn.hackclub.com/019ed763-2997-7e19-b75e-7f61ef8e9eb3/screenshot_2026-06-18_022907.png",
+      "https://cdn.hackclub.com/019ed763-2c2b-7497-b860-849d0363f077/screenshot_2026-06-18_022828.png",
+      "https://cdn.hackclub.com/019ed763-2fa6-70ff-a69a-c68949afdb54/screenshot_2026-06-18_022843.png",
+      
+      // --- New Upgraded CDN Links ---
+      "https://cdn.hackclub.com/019ed787-f411-743c-b38e-dedce0fd33fe/dscf5717.jpg",
+      "https://cdn.hackclub.com/019ed787-f850-7b33-b703-8e0b9e61c3e9/image.png",
+      "https://cdn.hackclub.com/019ed787-ff4c-785c-a620-0218e46c42b3/image.png",
+      "https://cdn.hackclub.com/019ed788-02e5-7ca5-848e-d821a17cc9fa/image.png",
+      "https://cdn.hackclub.com/019ed788-06da-7b13-a326-9dc427eb87c9/image.png",
+      "https://cdn.hackclub.com/019ed788-0b3f-7acc-b254-ad935760c1dd/image.png",
+      "https://cdn.hackclub.com/019ed78f-7b00-7c54-adb3-a013770465d6/image.png",
+      "https://cdn.hackclub.com/019ed78f-7e66-7962-86ab-dcdbf828a1ea/image.png",
+      "https://cdn.hackclub.com/019ed78f-b8fb-77ad-9c78-ffd9a990129d/image.png",
+      "https://cdn.hackclub.com/019ed78a-906d-7aa4-aa8c-a56e690bb8bb/image.png",
+      "https://cdn.hackclub.com/019ed789-5b83-7c6f-a96e-fe28076696f4/image.png"
+    ];
+
+    // True Shuffle
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+
+    // Set images up for the 6 premium frame elements
+    const frames = document.querySelectorAll(".premium-polaroid");
+    frames.forEach((frame, idx) => {
+      const img = frame.querySelector("img");
+      if (img && pool[idx]) {
+        img.src = pool[idx];
+        
+        // Dynamic smooth tilts (-7deg to +7deg)
+        const randomRotate = Math.floor(Math.random() * 14) - 7;
+        frame.style.setProperty('--init-tilt', `${randomRotate}deg`);
+        
+        img.onload = () => frame.classList.add("visible");
+      }
+    });
+  });
