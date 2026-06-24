@@ -1,6 +1,16 @@
 {
   "limitedTime": [
     {
+      "name": "Calculate",
+      "deadline": "2026-07-18T00:00:00.000Z",
+      "description": "Make a project involving numbers, get a calculator + stickersheet!",
+      "website": "https://calculate.hackclub.com",
+      "slack": "https://hackclub.enterprise.slack.com/archives/C0ARJHZPU9H",
+      "slackChannel": "#calculate",
+      "status": "active",
+      "opens": "2026-06-24T00:00:00.000Z"
+    },
+    {
       "name": "You Snake We Snake",
       "deadline": "2026-06-22T00:00:00.000Z",
       "description": "Make a game inspired by the classic Snake game and get a 45-inch snake plush!",
@@ -19,6 +29,15 @@
       "slackChannel": "#metroship",
       "status": "upcoming",
       "opens": "2026-6-10"
+    },
+    {
+      "name": "Outpost",
+      "deadline": "2026-07-13T00:00:00.000Z",
+      "description": "4-day hackathon followed by a 2-day showcase at Open Sauce! Make hardware projects in Stardance Challenge to qualify.",
+      "website": "https://outpost.hackclub.com/",
+      "slack": "https://hackclub.enterprise.slack.com/archives/C0B04RP43TQ",
+      "slackChannel": "#outpost",
+      "status": "active"
     },
     {
       "name": "Stardance",
@@ -40,7 +59,7 @@
     },
     {
       "name": "Insert Coin",
-      "deadline": "2026-06-20T00:00:00.000Z",
+      "deadline": "2026-07-20T00:00:00.000Z",
       "description": "An Arcade themed game dev where teens make games, post them, and earn reward tiers through plays.",
       "website": "https://insertcoin.hackclub.com/",
       "slack": "https://hackclub.enterprise.slack.com/archives/C0B9833PULV",
