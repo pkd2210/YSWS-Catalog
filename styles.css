@@ -6427,6 +6427,17 @@ footer {
   box-shadow: 0 22px 38px rgba(255, 68, 68, 0.3);
 }
 
+.program-card.treasure-hunt-card {
+  border: 2px solid #d6a437 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.program-card.treasure-hunt-card:hover {
+  border-color: #f0c65f !important;
+  box-shadow: 0 22px 38px rgba(214, 164, 55, 0.25);
+}
+
 .blare-wordmark {
   width: min(200px, calc(100% - 88px));
   height: auto;
