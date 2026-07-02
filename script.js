@@ -512,6 +512,8 @@ function createProgramCard(program) {
                                     ? '<img src="logos/InsertCoinLogo.png" alt="Insert Coin" class="insert-coin-wordmark">'
                                     : program.name === 'Polygon'
                                        ? '<img src ="./logos/polygon_logo.png" alt="polygon" class= "polygon-wordmark">'
+                                       : program.name === 'Treasure Hunt'
+                                       ? '<img src="logos/treasure%20hunt%20logo.webp" alt="Treasure Hunt" class="treasure-hunt-wordmark">'
                                        : program.name === 'Calculate'
                                        ? '<img src="logos/calculate.PNG" alt="calculate" class="calculate-wordmark">'
                                         : program.name === 'BLARE'
